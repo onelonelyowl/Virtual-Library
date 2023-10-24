@@ -24,4 +24,9 @@ describe('Media Tests', () => {
     const music = new Media('Abbey Road', 1969, 'Rock')
     expect(Media.totalMediaCount).toBe(5)
   })
+
+  test('adds to ALL_MEDIA when making new media', () => {
+    const book = new Media('The Catcher in the Rye', 1951, 'Fiction')
+    expect(Media.ALL_MEDIA.length).toBeGreaterThan(0)
+  })
 })
